@@ -1,17 +1,17 @@
 addition = (n1, n2) => {
-    return Number(n1) + Number(n2)
+    return Math.round((Number(n1) + Number(n2))*100)/100
 }
 
 subtraction = (n1, n2) => {
-    return Number(n1) - Number(n2)
+    return Math.round((Number(n1) - Number(n2))*100)/100
 }
 
 multipllication = (n1, n2) => {
-    return Number(n1) * Number(n2)
+    return Math.round((Number(n1) * Number(n2))*100)/100
 }
 
 division = (n1, n2) => {
-    return Number(n1)/Number(n2)
+    return Math.round((Number(n1) / Number(n2))*100)/100
 }
 
 intepreteStrings = (inputString) => {
