@@ -11,6 +11,9 @@ multipllication = (n1, n2) => {
 }
 
 division = (n1, n2) => {
+    if (Number(n1)  === 0 || Number(n2) === 0) {
+        return "Very funny"
+    }
     return Math.round((Number(n1) / Number(n2))*100)/100
 }
 
@@ -66,7 +69,9 @@ intepreteStrings = (inputString) => {
 
 operate = (inputString) => {
     let mathArray = intepreteStrings(inputString)
-    console.log(mathArray)
+    if (mathArray === undefined) {
+        return "Error, invalid calculation"
+    }
     if (mathArray[1] === "+") {
         if (mathArray.length === 4){
             return addition(mathArray[0],mathArray[2]) + mathArray[3]
